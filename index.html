@@ -6,6 +6,11 @@
 <title>Matthew Snowden</title>
 <meta name="description" content="Matthew Snowden — founder and CEO of Ten Sixty AI." />
 
+<!-- Poppins (Google Fonts) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
 <style>
   *,
   *::before,
@@ -16,80 +21,134 @@
   body {
     margin: 0;
     background: #ffffff;
-    color: #000000;
-    /* Same font family as blakebyers.com */
-    font-family: "Times New Roman", Times, Georgia, serif;
-    font-size: 18px;
-    line-height: 1.5;
+    color: #111111;
+    /* Poppins (Google Fonts) with sans-serif fallback */
+    font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, "Segoe UI", Roboto, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
 
+  /* thin dark bar across the very top, like the reference */
+  .topbar {
+    height: 6px;
+    background: #2e2e2e;
+    width: 100%;
+  }
+
   .page {
-    max-width: 720px;
+    max-width: 760px;
     margin: 0 auto;
-    padding: 64px 28px 120px;
+    padding: 0 28px 140px;
   }
 
-  h1 {
-    font-size: 22px;
-    font-weight: 700;
-    margin: 0 0 28px;
-    letter-spacing: 0.2px;
+  /* Centered name at top */
+  .site-name {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 40px 0 0;
   }
+  .site-name a { color: #111; text-decoration: none; }
 
-  h2 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 40px 0 16px;
-    letter-spacing: 0.2px;
-  }
+  /* spacing block under the centered name before intro */
+  .intro { margin-top: 150px; }
 
   p {
-    margin: 0 0 20px;
+    margin: 0 0 26px;
+  }
+
+  /* Large, light section headings */
+  h2 {
+    font-size: 46px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin: 70px 0 30px;
+    color: #111;
   }
 
   a {
-    color: #1a0dab;
+    color: #111;
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
     text-decoration-thickness: 1px;
+    text-decoration-color: #888;
     word-break: break-word;
   }
-  a:hover { color: #6a1ba8; }
-  a:visited { color: #6a1ba8; }
+  a:hover { text-decoration-color: #111; }
 
-  .links p { margin-bottom: 10px; }
+  strong { font-weight: 700; }
 
-  @media (max-width: 600px) {
-    body { font-size: 17px; }
-    .page { padding: 40px 20px 80px; }
-    h1 { font-size: 21px; }
-    h2 { font-size: 17px; margin: 36px 0 14px; }
+  /* Square bullet lists */
+  ul {
+    list-style: none;
+    margin: 0 0 26px;
+    padding: 0;
+  }
+  ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 18px;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    background: #111;
   }
 
-  @media (max-width: 380px) {
-    body { font-size: 16px; }
-    .page { padding: 32px 16px 64px; }
+  /* plain link list (no bullets) for the raw URL block */
+  .links { margin: 0 0 26px; }
+  .links p { margin-bottom: 14px; }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #e2e2e2;
+    margin: 50px 0;
   }
 
-  @media (min-width: 1000px) {
+  /* ---------- Responsive ---------- */
+  @media (max-width: 700px) {
     body { font-size: 19px; }
+    .page { padding: 0 22px 100px; }
+    .site-name { font-size: 26px; }
+    .intro { margin-top: 90px; }
+    h2 { font-size: 36px; margin: 56px 0 24px; }
+    ul li { padding-left: 26px; }
+  }
+
+  @media (max-width: 420px) {
+    body { font-size: 18px; }
+    .page { padding: 0 18px 80px; }
+    .site-name { font-size: 24px; margin-top: 32px; }
+    .intro { margin-top: 64px; }
+    h2 { font-size: 30px; }
   }
 </style>
 </head>
 <body>
+  <div class="topbar"></div>
+
   <main class="page" id="page">
 
-    <p>….</p>
+    <!-- Centered name -->
+    <h1 class="site-name"><a href="/">Matthew Snowden</a></h1>
 
-    <h1>Matthew Snowden</h1>
+    <!-- Intro -->
+    <div class="intro">
+      <p>I work on projects that are positive, and that often involve a unique evolutionary and complexity lens.</p>
 
-    <p>I work on projects that are positive, and that often involve a unique evolutionary and complexity lens.</p>
+      <p>Please reach out, my email is not that hard to find. Twitter <a href="https://x.com/mattsnow2026" target="_blank" rel="noopener">@mattsnow2026</a> <a href="https://www.linkedin.com/in/matthew-snowden-843a2858/" target="_blank" rel="noopener">Linkedin</a></p>
+    </div>
 
-    <p>Please reach out, my email is not that hard to find. Twitter <a href="https://x.com/mattsnow2026" target="_blank" rel="noopener">@mattsnow2026</a> <a href="https://www.linkedin.com/in/matthew-snowden-843a2858/" target="_blank" rel="noopener">Linkedin</a></p>
-
-    <h2>Companies &amp; work:</h2>
+    <!-- Companies & work -->
+    <h2>Companies &amp; work</h2>
 
     <p>Matthew Snowden is the founder and CEO of Ten Sixty AI, an artificial intelligence platform focused on the future of real estate and institutional decision-making.</p>
 
